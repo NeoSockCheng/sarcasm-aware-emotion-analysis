@@ -6,7 +6,7 @@ A transformer-based NLP model that enhances tweet emotion classification by inco
 2. Navigate to the project root (sarcas-aware-emotion-analysis), create a new venv:
 ```bash
 python -m venv venv
-source venv\Scripts\activate
+.\venv\Scripts\Activate.ps1
 # or `source venv/bin/activate` (Linux/macOS)
 ```
 3. Install dependencies:
@@ -18,7 +18,7 @@ pip install -r requirements.txt
 Everytime before running any code in the project:
 ```bash
 cd /path/to/your/project
-source venv\Scripts\activate
+.\venv\Scripts\Activate.ps1
 ```
 Everytime after you installed/updated any package:
 ```bash

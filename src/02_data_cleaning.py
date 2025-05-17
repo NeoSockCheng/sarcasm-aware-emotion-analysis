@@ -27,6 +27,18 @@ def truncate_text(text, max_tokens=218):
     return text
 
 def clean_and_truncate_dataframe(df):
+    # Ensure 'text' column exists
+    if 'text' not in df.columns:
+        if 'Text' in df.columns:
+            df = df.rename(columns={'Text': 'text'})
+        else:
+            raise ValueError("No 'text' or 'Text' column found in the dataframe.")
+    # Rename Emotion to emotion_label if exists
+    if 'Emotion' in df.columns:
+        df = df.rename(columns={'Emotion': 'emotion_label'})
+    # Rename label to sarcasm_label if exists
+    if 'label' in df.columns:
+        df = df.rename(columns={'label': 'sarcasm_label'})
     # Clean text
     df["text"] = df["text"].astype(str).apply(clean_text)
     # Truncate to 218 tokens
@@ -44,10 +56,10 @@ def clean_and_export(input_path, output_path):
 def main():
     # Example usage for multiple files
     files_to_clean = [
-        ("data/raw/emotion_raw.csv", "your_train_cleaned.csv"),
-        ("sarcasm_test_raw.csv", "your_test_cleaned.csv"),
-        ("sarcasm_train_raw.csv", "your_val_cleaned.csv"),
-        ("sarcasm_validation_raw.csv", "your_val_cleaned.csv"),
+        ("data/raw/emotion_raw.csv", "data/cleaned/emotion_cleaned.csv"),
+        ("data/raw/sarcasm_test_raw.csv", "data/cleaned/sarcasm_test_cleaned.csv"),
+        ("data/raw/sarcasm_train_raw.csv", "data/cleaned/sarcasm_train_cleaned.csv"),
+        ("data/raw/sarcasm_validation_raw.csv", "data/cleaned/sarcasm_validation_cleaned.csv"),
     ]
     for input_path, output_path in files_to_clean:
         try:
