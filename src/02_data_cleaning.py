@@ -13,8 +13,6 @@ def clean_text(text):
     text = re.sub(r"\b\d+\b", "[NUM]", text)
     # Remove redundant mentions (keep only the first @user in a sequence)
     text = re.sub(r'(@\w+)(\s+@\w+)+', r'\1', text)
-    # Remove non-standard/control characters
-    text = re.sub(r"[^\x00-\x7F]+", "", text)
     # Strip multiple spaces, tabs, or newlines
     text = re.sub(r"\s+", " ", text).strip()
     return text
