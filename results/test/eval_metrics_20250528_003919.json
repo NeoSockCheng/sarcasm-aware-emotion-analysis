@@ -1,0 +1,17 @@
+{
+    "emotion_metrics": {
+        "task": "emotion",
+        "accuracy": 0.718568665377176,
+        "precision": 0.7334628331943145,
+        "recall": 0.7074618950953226,
+        "f1": 0.7138162861250301
+    },
+    "sarcasm_metrics": {
+        "task": "sarcasm",
+        "accuracy": 0.8177874186550976,
+        "precision": 0.8169077757685352,
+        "recall": 0.8187087974539669,
+        "f1": 0.8172499716842225
+    },
+    "combined_macro_f1": 0.7655331289046263
+}
