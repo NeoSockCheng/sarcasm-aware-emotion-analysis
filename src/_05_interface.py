@@ -4,7 +4,7 @@ from datetime import datetime
 import os
 import torch
 from transformers import AutoTokenizer
-from _09_multitask_model import MultiTaskModel
+from _04_multitask_model import MultiTaskModel
 import json
 
 # Load the model and tokenizer
