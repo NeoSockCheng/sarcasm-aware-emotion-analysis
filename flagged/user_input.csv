@@ -1,4 +1,25 @@
 text,output_0,output_1,timestamp
-,Emotion: Happy (Confidence: 92.0%),Sarcasm: No (Confidence: 15.0%),2025-05-25 23:21:13.664170
-sdsdsds happyyyyyyyyyyyyyyy,Emotion: Happy (Confidence: 92.0%),Sarcasm: No (Confidence: 15.0%),2025-05-25 23:21:25.249775
-asdasdasdasdasdasd,Emotion: Happy (Confidence: 92.0%),Sarcasm: No (Confidence: 15.0%),2025-05-25 23:21:40.053933
+"Oh great, another Monday. Just what I needed!",Emotion: joy (Confidence: 76.6%),Sarcasm: Yes (Confidence: 99.8%),2025-05-28 22:57:36.593054
+I love waiting in traffic for hours—it’s my favorite hobby.,Emotion: joy (Confidence: 87.1%),Sarcasm: Yes (Confidence: 99.7%),2025-05-28 22:57:57.944466
+"I failed? Awesome, now I can take the exam again!",Emotion: joy (Confidence: 62.4%),Sarcasm: Yes (Confidence: 99.8%),2025-05-28 22:59:18.453844
+I really enjoyed spending time with my family today.,Emotion: joy (Confidence: 93.7%),Sarcasm: No (Confidence: 96.2%),2025-05-28 22:59:55.633819
+"see, your best friend 🙂",Emotion: joy (Confidence: 52.5%),Sarcasm: Yes (Confidence: 72.1%),2025-05-28 23:00:19.119578
+The sunset was absolutely beautiful.,Emotion: joy (Confidence: 96.4%),Sarcasm: No (Confidence: 93.5%),2025-05-28 23:01:54.748893
+I’m so proud of what we’ve accomplished.,Emotion: joy (Confidence: 88.8%),Sarcasm: No (Confidence: 96.6%),2025-05-28 23:02:03.033791
+It’s hard to get out of bed sometimes.,Emotion: sadness (Confidence: 89.6%),Sarcasm: No (Confidence: 96.4%),2025-05-28 23:04:34.958970
+Every noise in the dark makes my heart race.,Emotion: fear (Confidence: 97.1%),Sarcasm: No (Confidence: 89.9%),2025-05-28 23:05:16.318549
+I can’t believe they lied to my face.,Emotion: anger (Confidence: 47.8%),Sarcasm: Yes (Confidence: 90.5%),2025-05-28 23:07:21.082549
+Stop interrupting me when I’m speaking.,Emotion: anger (Confidence: 91.4%),Sarcasm: No (Confidence: 55.2%),2025-05-28 23:07:56.142798
+"Ugh, this milk smells rotten! Who left it out?",Emotion: disgust (Confidence: 73.4%),Sarcasm: No (Confidence: 97.1%),2025-05-28 23:09:29.194706
+This food is crawling with ants. I feel sick!,Emotion: disgust (Confidence: 57.1%),Sarcasm: No (Confidence: 98.6%),2025-05-28 23:10:00.573320
+Why is there mold growing in this container? Disgusting!,Emotion: disgust (Confidence: 77.3%),Sarcasm: No (Confidence: 98.4%),2025-05-28 23:10:16.198932
+"Hi Phua, I really didn't expect you will come to my wedding ceremony! Thank you for coming!",Emotion: surprise (Confidence: 95.0%),Sarcasm: Yes (Confidence: 84.5%),2025-05-28 23:11:44.714199
+No way! You got engaged? That’s amazing!,Emotion: surprise (Confidence: 55.4%),Sarcasm: No (Confidence: 97.6%),2025-05-28 23:12:51.114414
+Hold on—you’re telling me he was lying this whole time?,Emotion: surprise (Confidence: 57.7%),Sarcasm: No (Confidence: 67.1%),2025-05-28 23:13:02.025347
+"I saw a shadow in the hallway, but I live alone.",Emotion: fear (Confidence: 95.8%),Sarcasm: No (Confidence: 81.3%),2025-05-28 23:15:53.536965
+The news just said a killer escaped—near my street.,Emotion: fear (Confidence: 92.3%),Sarcasm: No (Confidence: 84.9%),2025-05-28 23:16:07.654011
+The GPS led me to an abandoned road. No signal now,Emotion: fear (Confidence: 62.1%),Sarcasm: No (Confidence: 98.1%),2025-05-28 23:16:33.073738
+"Hi Kelvin, what's up?",Emotion: neutral (Confidence: 69.7%),Sarcasm: No (Confidence: 88.6%),2025-05-29 00:41:17.739443
+"Bravo to me, the master of poor decisions.",Emotion: joy (Confidence: 69.6%),Sarcasm: Yes (Confidence: 99.6%),2025-05-29 00:42:23.001815
+I’m ashamed of how I treated her that day.,Emotion: shame (Confidence: 79.3%),Sarcasm: No (Confidence: 55.7%),2025-05-29 00:56:06.150958
+That moment filled me with pure embarrassment and regret.,Emotion: shame (Confidence: 77.2%),Sarcasm: No (Confidence: 66.8%),2025-05-29 01:01:56.956225
