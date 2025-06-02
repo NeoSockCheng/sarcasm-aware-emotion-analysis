@@ -110,13 +110,23 @@ def save_to_csv(text, emotion_output, sarcasm_output):
     df.to_csv("flagged/user_input.csv", index=False)
     return "Data saved successfully!"
 
-with gr.Blocks() as app:
+with gr.Blocks(
+    css="""
+    #analyze-btn, #flag-btn {
+        background-color: #FF4D00 !important;
+        color: white !important;
+        font-weight: bold;
+        border-radius: 6px;
+        padding: 8px 16px;
+    }
+""") as app:
     gr.Markdown("## Emotion & Sarcasm Analyzer")
     gr.Markdown("This tool analyzes text for both emotion (8 categories) and sarcasm using a BERTweet-based multitask model.")
+    gr.Markdown("Occurence 2 | Group 6")
     
     # Input section
     input_text = gr.Textbox(lines=2, placeholder="Enter text here...", label="Input Text")
-    analyze_btn = gr.Button("Analyze")
+    analyze_btn = gr.Button("Analyze", elem_id="analyze-btn")
     
     # Output section
     with gr.Row():
@@ -125,7 +135,7 @@ with gr.Blocks() as app:
             sarcasm_output = gr.Textbox(label="Sarcasm Detection")
     
     # Flag button section
-    flag_btn = gr.Button("Flag/Save Results")
+    flag_btn = gr.Button("Flag and Save Results",  elem_id="flag-btn")
     save_status = gr.Textbox(label="Save Status", interactive=False)
     
     # History section
