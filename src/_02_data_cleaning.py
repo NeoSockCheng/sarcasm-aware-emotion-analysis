@@ -1,23 +1,25 @@
 import re
 import pandas as pd
 from transformers import AutoTokenizer
+from third_party.TweetNormalizer import normalizeTweet
 
 tokenizer = AutoTokenizer.from_pretrained("vinai/bertweet-base")
 
 def clean_text(text):
-    # Lowercase
-    text = text.lower()
-    # Replace URLs with [URL]
-    text = re.sub(r"http\S+|www\S+|https\S+", "[URL]", text)
-    # Replace numbers with [NUM]
-    text = re.sub(r"\b\d+\b", "[NUM]", text)
-    # Remove redundant mentions (keep only the first @user in a sequence)
-    text = re.sub(r'(@\w+)(\s+@\w+)+', r'\1', text)
-    # Strip multiple spaces, tabs, or newlines
-    text = re.sub(r"\s+", " ", text).strip()
-    return text
+    # Use TweetNormalizer to normalize raw tweet text
+    # This will:
+    # - replace URLs with 'HTTPURL'
+    # - replace mentions with '@USER'
+    # - convert emojis to text tokens
+    # - preserve casing and numbers
+    normalized_text = normalizeTweet(text)
+    
+    # Strip multiple spaces, tabs, or newlines just in case
+    normalized_text = re.sub(r"\s+", " ", normalized_text).strip()
+    
+    return normalized_text
 
-def truncate_text(text, max_tokens=218):
+def truncate_text(text, max_tokens=128):
     tokens = tokenizer.tokenize(text)
     if len(tokens) > max_tokens:
         tokens = tokens[:max_tokens]
@@ -39,8 +41,8 @@ def clean_and_truncate_dataframe(df):
         df = df.rename(columns={'label': 'sarcasm_label'})
     # Clean text
     df["text"] = df["text"].astype(str).apply(clean_text)
-    # Truncate to 218 tokens
-    df["text"] = df["text"].apply(lambda x: truncate_text(x, max_tokens=218))
+    # Truncate to 128 tokens
+    df["text"] = df["text"].apply(lambda x: truncate_text(x, max_tokens=128))
     # Remove duplicated text
     df = df.drop_duplicates(subset=["text"]).reset_index(drop=True)
     return df
