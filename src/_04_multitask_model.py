@@ -19,7 +19,7 @@ class MultiTaskModel(nn.Module):
         outputs = self.bert(input_ids=input_ids, attention_mask=attention_mask)
 
         # Use the [CLS] token embedding (first token)
-        pooled_output = outputs.last_hidden_state[:, 0]
+        pooled_output = self.dropout(outputs.last_hidden_state[:, 0])
 
         # Choose output head based on task
         if task == "emotion":
